@@ -1,0 +1,161 @@
+.background{
+background-image: url('../../image/background.jpg');
+ background-repeat: no-repeat; 
+ background-size: cover;
+  background-position: center center;
+}
+.inputSearch{
+	border: none;
+	outline: none;
+	background-color: transparent;
+	border-bottom: 1px solid  #D4D9DF;
+}
+
+.img-circle{
+	width:11% ; 
+	height: 11%;
+}
+
+.image{
+	width:20% ; 
+	height: 20%;
+}
+
+.center{
+	text-align: center;
+	color:#1A5276;
+	font-size: 18px;
+}
+.titre{
+	font-size: 14px;
+	color:#1A5276  ;
+}
+
+.grand_titre{
+	font-size: 18px;
+	color:#922B21 ;
+}
+
+.right{
+	text-align: right;
+}
+ 
+
+
+.accepter{
+	background-color: #7FB3D5  ;
+	border: 2px solid #7FB3D5; 
+	border-radius: 10%;
+	color: white;
+}
+
+.refuser{
+	border-radius:10%;
+	background-color: transparent;
+  	color: black;
+  	border: 2px solid #7FB3D5; /* Green */
+}
+.repondre{
+	border-radius:10%;
+	color: #0FD4E6;
+	background-color: transparent;
+  	border: 1px solid #0FD4E6;/* light_blue */
+}
+
+.obs{
+	width:100% ; 
+}
+
+.tableEvaluation{
+	padding:5%;
+	padding-top: 1%;
+}
+
+.aFaire{
+	color: #EB8438;
+}
+
+.enCours{
+	color: #29B6DE;
+}
+
+.termine{
+	color: #4A890B;
+}
+
+.voir_tache{
+	color:white;
+	margin-left:2%;
+}
+ .underline{
+ 	text-decoration: underline;
+ 	color: #E303CE;
+ }
+
+.tab {
+  float: right;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 21.4%;
+  height: 100%;
+  margin-right:1.5%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 10px 15px;
+  width: 100%;
+  border: 1px solid white;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+
+.tab_content{
+	float: left;
+  padding: 0px 0px;
+  margin-left:3.5%;
+  width:80%;
+  border-left: none;
+  height: 700px;
+  margin-top:-15%
+}
+
+.text{
+	margin-left:-2%;
+}
+
+.date{
+	margin-left:2.3%;
+	margin-top: 0.4%;
+	color:gray;
+}
+
+.bleu_ciel{
+	color: #0FD4E6;
+}
+
+.bleu_moyen{
+  color: #0D8F9B;
+}
+
+.black{
+	color:black;
+}

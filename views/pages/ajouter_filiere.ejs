@@ -1,0 +1,149 @@
+
+<%- include('header') -%>
+
+<div class="main-sidebar"> 
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar "  >
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/user2-160x160.jpg"  alt="User Image" class="img-circle">
+        </div>
+        <div class="pull-left info">
+          <p class="info-box-text">Amine Rajoui</p>
+          <!-- Status -->
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+
+      </div>
+
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+            <li><a href=""><i class="fa fa-sign-out"></i> <span>Déconnexion</span></a></li>
+
+        <!-- Optionally, you can add icons to the links -->
+        <li class="header"> Admin</li>
+        <li><a href=""><i class="fa fa-list-alt"></i> <span>Accueil</span></a></li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa  fa-user"></i> <span>Etudiants</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href=""><i class="fa fa-list-alt"></i> Liste des étudiants</a></li>
+            <li><a href=""><i class="fa fa-user-plus"></i> Ajouter étudiant</a></li>
+            <li><a href=""><i class="fa fa-archive"></i> Archive</a></li>
+          </ul>
+        </li>
+
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-tasks"></i>
+            <span>Filières</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href=""><i class="fa fa-list-ul"></i> Liste des filières</a></li>
+            <li><a href="ajouter_filiere.ejs"><i class="fa fa-plus-square"></i> Ajouter filière</a></li>
+          </ul>
+        </li>  
+
+          <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i> <span>Statistiques</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href=""><i class="fa fa-bar-chart"></i> étudiants</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+</div>
+
+<div class="content-wrapper background">
+
+  <section class="content" style="margin-left:5%; margin-right:5%; ">
+    <div class="box" style="margin-top:6% " >
+      <div class="box-header">
+            <h3 class="box-title">Ajouter filière</h3>
+          <legend style="margin-top:1.5%"> </legend>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+         <form method="post" action="/add_filiere" >
+          <div class="row">
+          </div>
+          <div class="row" style="margin-left:5%; margin-right:5%; ">
+          <div class="row" style="margin-top:5%; ">
+                <div class="col-lg-6 col-xs-6" style="padding:1%"  > 
+                  Intitulé
+                </div>
+                <div class="col-lg-6 col-xs-6" style="padding:1%"  >
+                 <input class="form-control" type="text" name="nom" placeholder="entrer le nom">
+                </div>
+                <div class="col-lg-6 col-xs-6" style="padding:1%"  > 
+                  Description
+                </div>
+                <div class="col-lg-6 col-xs-6" style="padding:1%"  >
+                 <input class="form-control" type="text" name="description" placeholder="donner une description" >
+                </div>
+                <select name="formation"  class="form-control">
+                  <option disabled selected value> -- séléctionner la formation  -- </option>
+                    <%for(i=0; i<formations.length; i++){%>
+                      <option value="<%= formations[i].nom%>" ><%= formations[i].nom %></option>
+                    <%}%>  
+                </select>
+          </div>
+          <legend></legend>
+          <div class="row" style="margin-top:2%;">
+            <button type="submit" class="btn btn-primary btn-flat" style="background-color: #7A8488;border-color: #7A8488; float:right"><i class="icon edit"></i>Ajouter</button>
+        </div>
+         </div> 
+          </form>
+      </div>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+    
+</section>
+
+
+<!-- /.content -->
+
+
+
+
+
+</div>
+
+<%- include('footer') -%>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
