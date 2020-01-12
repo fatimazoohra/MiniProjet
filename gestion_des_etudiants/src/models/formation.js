@@ -3,7 +3,7 @@ let validator = require('validator')
 let Schema = require('mongoose').Schema
 
 let connection = require('../database');
-let filiereSchema = require('./filiere')
+// let filiereSchema = require('./filiere')
 /*
 var child = new Schema({ name: String });
 var schema = new Schema({ name: String, age: Number, children: [child] });
@@ -11,12 +11,13 @@ var schema = new Schema({ name: String, age: Number, children: [child] });
 let formationSchema = new mongoose.Schema({
     nom: {
         type: String,
-        required: true,
+        //required: true,
         unique: true,
-        lowercase: true
+        //lowercase: true
     },
     description: String,
-    filieres: [filiereSchema],
+    //filieres: [filiereSchema],
+    //filiere:  ObjectId,
     createdAt: Date,
     updatedAt: Date
 })

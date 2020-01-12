@@ -1,11 +1,11 @@
 let mongoose = require('mongoose')
 let connection = require('../database')
-let validator = require('validator')
+let validator = require('validator');
 
 let etudiantSchema = new mongoose.Schema({
     nom: String,
     prenom: String,
-    image:{ data: Buffer, contentType: String },
+    image:{ data: String, contentType: String },
     CNI:{
         type: String,
         required: true,
@@ -25,8 +25,8 @@ let etudiantSchema = new mongoose.Schema({
     },
     ville: String,
     pays: String,
-    diplome:{ data: Buffer, contentType: String },
     adresse : String,
+    filiere:   {type: mongoose.Schema.Types.ObjectId, ref: 'Filiere'},
     createdAt: Date,
     updatedAt: Date
 })
@@ -42,3 +42,7 @@ etudiantSchema.pre('save', function (next) {
     next()    
   })
 module.exports = etudiantSchema;
+
+
+var etudiant = connection.model('Etudiant', etudiantSchema);
+module.exports = etudiant;
